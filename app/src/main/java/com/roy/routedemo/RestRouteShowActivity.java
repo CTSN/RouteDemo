@@ -525,7 +525,7 @@ public class RestRouteShowActivity extends AppCompatActivity implements AMapNavi
                         }
                         int key2 = routeOverlays.keyAt(j);
                         routeOverlays.get(key2).setTransparency(0.4f);
-                        routeOverlays.get(key).setZindex(0);
+                        routeOverlays.get(key2).setZindex(0);
                     }
                     routeOverlays.get(key).setTransparency(1.0f);
                     /**把用户选择的那条路的权值弄高，使路线高亮显示的同时，重合路段不会变的透明**/

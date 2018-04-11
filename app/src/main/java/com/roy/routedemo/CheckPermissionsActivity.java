@@ -13,12 +13,10 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
-import android.view.View;
 
 /**
  * 继承了Activity，实现Android6.0的运行时权限检测
@@ -69,6 +67,7 @@ public class CheckPermissionsActivity extends AppCompatActivity {
 
     private void start(){
         startActivity(new Intent(this,RestRouteShowActivity.class));
+        finish();
     }
 
     /**
