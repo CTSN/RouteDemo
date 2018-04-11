@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333640</color>
+    <color name="colorPrimaryDark">#333640</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="orange_solid_color">#ffa647</color>
+
+    <!--辅助色 警告-->
+    <color name="notice_color">#f44d44</color>
+
+    <color name="blue_color">#0c96f2</color>
+    <!--辅助色 可点击-->
+    <color name="click_color">#ff7000</color>
+    <!--导航字体-->
+    <color name="tab_color">#262626</color>
+    <!--正文字体-->
+    <color name="content_color">#333</color>
+    <!--按钮字体颜色-->
+    <color name="btn_color">#666</color>
+    <!--副字体-->
+    <color name="sub_content_color">#808080</color>
+    <!--最浅字体-->
+    <color name="low_color">#999</color>
+    <!--登录分割线-->
+    <color name="line_login">#ccc</color>
+    <!--虚线分割线-->
+    <color name="line_solid">#e5e5e5</color>
+    <!--正常分割线-->
+    <color name="line">#e8e9eb</color>
+    <color name="press">#ebebeb</color>
+    <!--背景色-->
+    <color name="bac">#f2f2f2</color>
+    <color name="white">#fff</color>
+    <color name="route_bac">#333640</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_transparent">#44000000</color>
+    <color name="guide_transparent">#5f000000</color>
+</resources>
+
