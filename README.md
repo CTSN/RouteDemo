@@ -28,23 +28,31 @@ PS:为啥小于0.00001，是考虑到两条路线如果坐标相差很近时，�
 该方法是监听地图上线段点击回调。我们路线规划出来，在屏幕上就是一段一段线段拼接出来的。
 回调出来这个类Polyline 究竟是什么呢？
 查看高德提供的参考手册
+
 ![这里写图片描述](https://img-blog.csdn.net/20180411162127562?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSb3ltb25k/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 回调出来就是点击的该线段，我们继续看参考手册，看提供的相应方法。
+
 ![这里写图片描述](https://img-blog.csdn.net/20180411162344365?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSb3ltb25k/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 里面有个获取线段顶点坐标列表的方法**getPoints()**。
 我们先把这个经纬度坐标列表打印出来看下。
+
 <img src="https://img-blog.csdn.net/20180411163211624?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSb3ltb25k/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="500px">
 在此我们第一步骤就完成了。
+
 #### 获取路线对应的坐标列表
 高德地图中路线这个类对应的是**RouteOverLay**这个类。
+
 ![这里写图片描述](https://img-blog.csdn.net/2018041116391926?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSb3ltb25k/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 同样的我们得去看下高德提供参考手册，有哪些方法可以提供。在翻看很久情况下都没找到类似**LatLng**经纬度数据这个类，但是其中有个方法是获取导航路径对象——**getAMapNaviPath()**。
+
 ![这里写图片描述](https://img-blog.csdn.net/20180411164249943?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSb3ltb25k/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 我们再点击查看这个类有什么方法是可以获取经纬度列表的。果然有获取坐标的列表。
+
 ![这里写图片描述](https://img-blog.csdn.net/20180411164435393?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSb3ltb25k/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 同样的我们把这个经纬度集合打印出来看下，是不是预想效果。
+
 <img src="https://img-blog.csdn.net/20180411164826591?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1ZSb3ltb25k/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" width="500px">
 打印出来的经纬度坐标巨多，因为路线规划是多个线段的组合所以坐标会很多。
 #### 坐标比较，选择对应路线
@@ -95,6 +103,7 @@ PS:为啥小于0.00001，是考虑到两条路线如果坐标相差很近时，�
         }
     }
 ```
+
 至此，整体的思路就是这样，具体Demo呢，还是找个周末放到Github上去。
 实现方法如有不足之处，请指出。
 题外话：看自己上篇博客的时间已经是去年了，自己偷懒了，得多学习了。
